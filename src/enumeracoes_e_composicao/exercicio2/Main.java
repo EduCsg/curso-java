@@ -1,10 +1,10 @@
 package enumeracoes_e_composicao.exercicio2;
 
-import enumeracoes_e_composicao.exercicio2.entities.Comment;
-import enumeracoes_e_composicao.exercicio2.entities.Post;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
+import enumeracoes_e_composicao.exercicio2.entities.Comment;
+import enumeracoes_e_composicao.exercicio2.entities.Post;
 
 public class Main {
 	public static void main(String[] args) {

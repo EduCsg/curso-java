@@ -1,8 +1,8 @@
 package enumeracoes_e_composicao.enumeracoes.entities;
 
-import enumeracoes_e_composicao.enumeracoes.enums.OrderStatus;
-
 import java.util.Date;
+
+import enumeracoes_e_composicao.enumeracoes.enums.OrderStatus;
 
 public class Order {
 
