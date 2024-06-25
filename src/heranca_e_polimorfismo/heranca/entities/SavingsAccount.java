@@ -1,6 +1,7 @@
 package heranca_e_polimorfismo.heranca.entities;
 
-public class SavingsAccount extends Account {
+// Final em classes -> Garante que a classe não seja herdada
+public final class SavingsAccount extends Account {
 
 	private Double interestRate;
 

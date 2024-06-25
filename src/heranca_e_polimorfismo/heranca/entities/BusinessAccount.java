@@ -27,8 +27,9 @@ public class BusinessAccount extends Account {
 
 	}
 
+	// Final no método -> Garante que o método não será sobrescrito
 	@Override
-	public void withdraw(Double amount) {
+	public final void withdraw(Double amount) {
 		super.withdraw(amount);
 		balance -= 2.0;
 	}
