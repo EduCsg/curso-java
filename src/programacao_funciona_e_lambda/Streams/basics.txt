@@ -1,0 +1,36 @@
+Uma Stream representa uma sequência de elementos.
+
+Características das Streams:
+    > Declarativa                   - Iteração interna, escondida do programador em si
+    > Parallel-friendly             - Imutável, thread safe, ou seja, não é necessário sincronizar
+    > Sem efeitos colaterais        - Não modifica a fonte de dados, apenas lê e gera uma "cópia"
+    > Sob Demanda (Lazy evaluation) - Os dados de uma stream só são consumidos quando necessário
+    > Acesso Sequencial             - Não tem índices, não é possível pular elementos, só é lida sequencialmente
+    > Single-use                    - A Stream só pode ser "usada" uma única vez, não é possível reutilizá-la
+    > Pipeline                      - Uma Stream pode ser composta por várias operações, formando um pipeline
+                                      -> Ou seja, uma operação usa o resultado da anterior para realizar a próxima
+
+Operação intermediária - 0 ou mais
+    > Produz uma nova Stream, gera encadeamento por conta disso
+    > Só executa quando uma operação terminal é invocada (lazy evaluation)
+
+    - Operações Comuns
+        > filter, map, flatMap, peek, distinct, sorted, skip
+
+    - Operações short-circuit (encerra a execução assim que a condição for atendida)
+        > limit
+
+Operação terminal - 1
+    > Produz um resultado diferente de uma Stream
+    > Determina que será o fim do processamento da stream
+
+    - Operações Comuns
+        > forEach, forEachOrdered, toArray, reduce, collect, min, max, count
+
+    - Operações short-circuit (encerra a execução assim que a condição for atendida)
+        > anyMatch, allMatch, noneMatch, findFirst, findAny
+
+Instanciação de Stream
+    > Stream.of()           - Cria uma Stream a partir de um array ou de valores individuais
+    > Stream.ofNullable()   - Cria uma Stream a partir de um valor que pode ser nulo
+    > Stream.iterate()      - Cria uma Stream a partir de um Iterator
